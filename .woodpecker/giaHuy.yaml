@@ -1,0 +1,18 @@
+# This runs only when there are changes
+when:
+  # This runs whenever there is a pull request on main
+ - event: pull_request
+   branch: main
+   path:
+    include: 
+    - 'giaViet/**'
+    - 'giaHuy/**'
+    - 'anhTuan/**'
+    - '.woodpecker/**'
+
+steps:
+  # Test run
+ - name: test-run
+   image: ghcr.io/narwhal1412/da-python-3_12-slim:latest
+   commands:
+    - jupyter nbconvert --to notebook --execute giaHuy/524H0158.ipynb --output-dir /tmp/out
