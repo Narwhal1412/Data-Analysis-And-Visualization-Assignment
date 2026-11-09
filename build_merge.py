@@ -4,7 +4,7 @@ import glob, os
 import nbformat
 
 # Define the order of which to stitch the file together
-folder_order = ["giaHuy","anhTuan","giaViet"]
+folder_order = ["giaHuy","giaViet","anhTuan"]
 
 # Go down one folder deep, and get all the notebooks with the glob /.
 
